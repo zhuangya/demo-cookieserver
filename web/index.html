@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<div ng-app>
+  <div ng-controller="PageCtrl">
+    {{info}}
+  </div>
+  <script>
+    function PageCtrl($scope, $http) {
+      $scope.info = 'run';
+      $http.get('http://cookie.test.com').success(function(resp) {
+        console.log(resp);
+      });
+    }
+  </script>
+</div>

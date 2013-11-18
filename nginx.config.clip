@@ -1,0 +1,13 @@
+server {
+  listen 80;
+  server_name cookie.test.com;
+  location / {
+    proxy_pass http://localhost:8888;
+  }
+}
+
+server {
+  listen 80;
+  server_name test.com;
+  root __CURRENT_WORKING_DIRECTORY/web/;
+}
