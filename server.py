@@ -1,7 +1,7 @@
 import tornado.ioloop
 import tornado.web
 
-# cookie.niqu.me
+# cookie.test.me
 class MainHandler(tornado.web.RequestHandler):
     def options(self):
         self.set_header('Access-Control-Allow-Origin', '*')
